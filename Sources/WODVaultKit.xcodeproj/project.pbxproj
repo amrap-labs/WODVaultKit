@@ -10,6 +10,8 @@
 		469979911FD4260D006D311D /* WODVaultKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469979871FD4260D006D311D /* WODVaultKit.framework */; };
 		469979961FD4260D006D311D /* WODVaultKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469979951FD4260D006D311D /* WODVaultKitTests.swift */; };
 		469979981FD4260D006D311D /* WODVaultKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4699798A1FD4260D006D311D /* WODVaultKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		469979A21FD42781006D311D /* WODVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469979A11FD42781006D311D /* WODVault.swift */; };
+		469979A41FD427BA006D311D /* VaultBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469979A31FD427BA006D311D /* VaultBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		469979901FD4260D006D311D /* WODVaultKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WODVaultKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		469979951FD4260D006D311D /* WODVaultKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODVaultKitTests.swift; sourceTree = "<group>"; };
 		469979971FD4260D006D311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469979A11FD42781006D311D /* WODVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODVault.swift; sourceTree = "<group>"; };
+		469979A31FD427BA006D311D /* VaultBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				4699798A1FD4260D006D311D /* WODVaultKit.h */,
+				469979A11FD42781006D311D /* WODVault.swift */,
+				469979A31FD427BA006D311D /* VaultBox.swift */,
 				4699798B1FD4260D006D311D /* Info.plist */,
 			);
 			path = WODVaultKit;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					469979861FD4260D006D311D = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					4699798F1FD4260D006D311D = {
@@ -196,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469979A41FD427BA006D311D /* VaultBox.swift in Sources */,
+				469979A21FD42781006D311D /* WODVault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +343,7 @@
 		4699799C1FD4260D006D311D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrap.WODVaultKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +365,7 @@
 		4699799D1FD4260D006D311D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +386,7 @@
 		4699799F1FD4260D006D311D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WODVaultKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +400,7 @@
 		469979A01FD4260D006D311D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WODVaultKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

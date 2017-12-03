@@ -3,4 +3,4 @@
 import UIKit
 import WODVaultKit
 
-var str = "Hello, playground"
+let vault = WODVault(vaultUrl: URL(string: "https://wodvault.herokuapp.com")!)
